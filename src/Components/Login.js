@@ -14,7 +14,7 @@ function Login() {
           <TextField id="" label={"Password"} type='password' variant="standard" /><br></br>
           <Button className='btn-login' variant='contained' color='info'>LOGIN</Button>
           <Typography variant='p' sx={{ marginTop:2, textAlign:'center'}}>Monterola Realty</Typography>
-    </Box>
+        </Box>
   )
 }
 

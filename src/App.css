@@ -58,4 +58,28 @@
   padding: 1rem;
 }
 
+.box-register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  width: 50%;
+  margin: auto;
+  padding: 1rem;
+  margin-top: 2rem;
+  border-radius: 1rem;
+}
+
+.box-register > Textfield {
+  width: fit-content;
+}
+
+.typographyHeader-register {
+  font-size: 2rem;
+  text-align: center;
+  padding: 1rem;
+}
+
 
