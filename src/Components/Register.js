@@ -1,4 +1,5 @@
 import { Box, Button, FormHelperText, InputLabel, MenuItem, Select, TextField, Typography } from '@mui/material'
+import { red } from '@mui/material/colors';
 import React, { useState } from 'react'
 
 function Register() {
@@ -32,7 +33,7 @@ function Register() {
                   Buyer
                 </MenuItem>
             </Select>
-            <FormHelperText className='register-select-formhelper'><em>*Please select if you are a Vendor or a Buyer.</em></FormHelperText>
+          <FormHelperText className='register-select-formhelper' sx={{ colorText:'red'}}><em>*Please select if you are a Vendor or a Buyer.</em></FormHelperText>
             <Button sx={{width:300, marginTop:2}} className='btn-register' variant='contained' color='info'>Submit</Button>
           <Typography variant='p' sx={{ marginTop:2, textAlign:'center'}}>Monterola Realty</Typography>
         </Box>
