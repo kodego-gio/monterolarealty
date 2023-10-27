@@ -1,5 +1,4 @@
 import { Box, Button, FormHelperText, InputLabel, MenuItem, Select, TextField, Typography } from '@mui/material'
-import { red } from '@mui/material/colors';
 import React, { useState } from 'react'
 
 function Register() {
@@ -10,12 +9,7 @@ function Register() {
   };
 
   return (
-          <Box className="box-register"
-          sx={{
-              "hover": {
-                  boxShadow: "10px 10px 20px #ccc",
-              },
-          }}>
+          <Box className="box-register">
           <Typography variant='h4' className='typographyHeader-register'>Register</Typography>
             <TextField id="" sx={{ width: 500 }} label={"Firstname"} type='email' variant="standard" /><br></br>
             <TextField id="" sx={{width:500}} label={"Lastname"}type= 'email'  variant="standard" /><br></br>
@@ -35,7 +29,7 @@ function Register() {
             </Select>
           <FormHelperText className='register-select-formhelper' sx={{ colorText:'red'}}><em>*Please select if you are a Vendor or a Buyer.</em></FormHelperText>
             <Button sx={{width:300, marginTop:2}} className='btn-register' variant='contained' color='info'>Submit</Button>
-          <Typography variant='p' sx={{ marginTop:2, textAlign:'center'}}>Monterola Realty</Typography>
+          <Typography variant='p' sx={{ marginTop:2, textAlign:'center'}}>&copy; 2023 Monterola Realty. All Rights Reserved.</Typography>
         </Box>
   )
 }

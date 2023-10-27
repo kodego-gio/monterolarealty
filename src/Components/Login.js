@@ -10,10 +10,11 @@ function Login() {
               },
           }}>
           <Typography variant='h4' className='typographyHeader-login'>Login</Typography>
-          <TextField id="" label={"Email"}type= 'email'  variant="standard" /><br></br>
-          <TextField id="" label={"Password"} type='password' variant="standard" /><br></br>
-          <Button className='btn-login' variant='contained' color='info'>LOGIN</Button>
-          <Typography variant='p' sx={{ marginTop:2, textAlign:'center'}}>Monterola Realty</Typography>
+            <TextField id="" label={"Email"}type= 'email'  variant="standard" /><br></br>
+            <TextField id="" label={"Password"} type='password' variant="standard" /><br></br>
+            <Button className='btn-login' variant='contained' color='info'>LOGIN</Button>
+          <Typography variant='p' sx={{ marginTop: 2, textAlign: 'center' }}>&copy; 2023 Monterola Realty. All Rights Reserved.</Typography>
+      
         </Box>
   )
 }
