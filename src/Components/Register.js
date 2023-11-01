@@ -9,14 +9,14 @@ function Register() {
   };
 
   return (
-          <Box className="box-register">
+          <Box component='form' className="box-register">
           <Typography variant='h4' className='typographyHeader-register'>Register</Typography>
-            <TextField id="" sx={{ width: 500 }} label={"Firstname"} type='email' variant="standard" /><br></br>
-            <TextField id="" sx={{width:500}} label={"Lastname"}type= 'email'  variant="standard" /><br></br>
-            <TextField id="" sx={{width:500}} label={"Email"}type= 'email'  variant="standard" /><br></br>
-            <TextField id="" sx={{ width: 500 }} label={"Password"} type='password' variant="standard" /><br></br>
-            <InputLabel className='register-inputlabel-whatareyou' sx={{ width: 500 }} shrink >What are you?</InputLabel>
-            <Select sx={{ width: 500 }} className='register-select' displayEmpty value={selected} onChange={selectionChangeHandler} variant="standard">              
+            <TextField id="" fullWidth label={"Firstname"} type='email' variant="standard" /><br></br>
+            <TextField id="" fullWidth label={"Lastname"}type= 'email'  variant="standard" /><br></br>
+            <TextField id="" fullWidth label={"Email"}type= 'email'  variant="standard" /><br></br>
+            <TextField id="" fullWidth label={"Password"} type='password' variant="standard" /><br></br>
+            <InputLabel className='register-inputlabel-whatareyou' shrink ><h3>What are you?</h3></InputLabel>
+            <Select fullWidth className='register-select' displayEmpty value={selected} onChange={selectionChangeHandler} variant="standard">              
               <MenuItem value="">
                   Please select
               </MenuItem>
@@ -27,8 +27,8 @@ function Register() {
                   Buyer
                 </MenuItem>
             </Select>
-          <FormHelperText className='register-select-formhelper' sx={{ colorText:'red'}}><em>*Please select if you are a Vendor or a Buyer.</em></FormHelperText>
-            <Button sx={{width:300, marginTop:2}} className='btn-register' variant='contained' color='info'>Submit</Button>
+          <FormHelperText className='register-select-formhelper'><em>*Please select if you are a Vendor or a Buyer.</em></FormHelperText>
+            <Button className='btn-register' variant='contained' color='info'>Submit</Button>
           <Typography variant='p' sx={{ marginTop:2, textAlign:'center'}}>&copy; 2023 Monterola Realty. All Rights Reserved.</Typography>
         </Box>
   )
