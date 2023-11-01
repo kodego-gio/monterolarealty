@@ -1,7 +1,7 @@
 
 import React from 'react'
-import { Carousel } from 'react-bootstrap'
 import MyCarousel from './MyCarousel'
+import SaleRentProjectSelling from './SaleRentProjectSelling'
 
 
 
@@ -9,7 +9,8 @@ import MyCarousel from './MyCarousel'
 function Home() {
   return (
     <>
-    <MyCarousel />  
+      <MyCarousel />  
+      <SaleRentProjectSelling />
     </>
    
   )
