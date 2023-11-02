@@ -1,8 +1,8 @@
 
 import React from 'react'
 import MyCarousel from './MyCarousel'
-import SaleRentProjectSelling from './SaleRentProjectSelling'
 import ContactForm from './ContactForm'
+import SaleRentProjectSelling from './SaleRentProjectSelling'
 
 
 function Home() {

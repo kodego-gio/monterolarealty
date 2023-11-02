@@ -5,7 +5,7 @@ import React from 'react'
 function SaleRentProjectSelling() {
   return (
     <Grid className='grid-cards-container'container spacing={3}>
-          <Grid item xs={12} sm={6} md={4}>
+      <Grid item xs={12} sm={6} md={4}>
               <Card className='cls-card1-homepage' sx={{ maxWidth: 345 }}>
                 <CardActionArea>
                     <CardMedia

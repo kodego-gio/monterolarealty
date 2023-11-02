@@ -97,6 +97,7 @@ nav {
 /*---------------------Homepage Card CSS----------------------------*/
 .cls-card1-homepage.css-1ri6ub7-MuiPaper-root-MuiCard-root, .cls-card2-homepage.css-1ri6ub7-MuiPaper-root-MuiCard-root, .cls-card3-homepage.css-1ri6ub7-MuiPaper-root-MuiCard-root {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  margin-left: 2rem;
 }
 
 /*---------------------Contact Form CSS----------------------------*/
@@ -257,14 +258,13 @@ select {
   border-radius: 5px;
 }
 
-button {
+.btn-register button {
   background-color: #007BFF;
   color: #fff;
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
   cursor: pointer;
-  width: 100%;
 }
 
 button:hover {
@@ -274,5 +274,6 @@ button:hover {
 /*---------------------Card CSS----------------------------*/
 .grid-cards-container.MuiGrid-root {
   background-color: aliceblue;
-  padding: 2rem 0rem 2rem 3.8rem;
+  padding: 2rem;
+  
 }
