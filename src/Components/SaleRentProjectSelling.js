@@ -4,19 +4,19 @@ import React from 'react'
 
 function SaleRentProjectSelling() {
   return (
-    <Grid container spacing={3}>
-        <Grid item xs={3}>
-              <Card sx={{ maxWidth: 345 }}>
+    <Grid className='mycarousel' container spacing={3}>
+          <Grid item xs={3} md={4}>
+              <Card className='cls-card1-homepage' sx={{ maxWidth: 345 }}>
                 <CardActionArea>
                     <CardMedia
                     component="img"
                     height="140"
-                    src={require('../imgs/alveo.png')}
-                    alt="ALVEO"
+                    src={require('../imgs/for_sale.webp')}
+                    alt="For Sale"
                     />
                     <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
-                    Lizard
+                    For Sale
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
                     Lizards are a widespread group of squamate reptiles, with over 6,000
@@ -24,21 +24,20 @@ function SaleRentProjectSelling() {
                     </Typography>
                     </CardContent>
                 </CardActionArea>   
-              </Card>
-              
+              </Card>        
           </Grid>
-          <Grid item xs={3}>
-              <Card sx={{ maxWidth: 345 }}>
+          <Grid item xs={3} md={4}>
+              <Card className='cls-card2-homepage' sx={{ maxWidth: 345 }}>
                 <CardActionArea>
                     <CardMedia
                     component="img"
                     height="140"
-                    src={require('../imgs/alveo.png')}
-                    alt="ALVEO"
+                    src={require('../imgs/for_rent.webp')}
+                    alt="For Rent"
                     />
                     <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
-                    Lizard
+                    For Rent
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
                     Lizards are a widespread group of squamate reptiles, with over 6,000
@@ -46,21 +45,20 @@ function SaleRentProjectSelling() {
                     </Typography>
                     </CardContent>
                 </CardActionArea>   
-              </Card>
-              
+              </Card>            
           </Grid>
-          <Grid item xs={3}>
-              <Card sx={{ maxWidth: 345 }}>
+          <Grid item xs={3} md={4}>
+              <Card className='cls-card3-homepage' sx={{ maxWidth: 345 }}>
                 <CardActionArea>
                     <CardMedia
                     component="img"
                     height="140"
-                    src={require('../imgs/alveo.png')}
-                    alt="ALVEO"
+                    src={require('../imgs/preselling.webp')}
+                    alt="Preselling Projects"
                     />
                     <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
-                    Lizard
+                    Preselling Projects
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
                     Lizards are a widespread group of squamate reptiles, with over 6,000
@@ -68,8 +66,7 @@ function SaleRentProjectSelling() {
                     </Typography>
                     </CardContent>
                 </CardActionArea>   
-              </Card>
-              
+              </Card>           
         </Grid>
     </Grid>
   )
