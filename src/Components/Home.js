@@ -5,8 +5,6 @@ import SaleRentProjectSelling from './SaleRentProjectSelling'
 import ContactForm from './ContactForm'
 
 
-
-
 function Home() {
   return (
     <>

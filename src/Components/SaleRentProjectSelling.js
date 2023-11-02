@@ -4,8 +4,8 @@ import React from 'react'
 
 function SaleRentProjectSelling() {
   return (
-    <Grid className='mycarousel' container spacing={3}>
-          <Grid item xs={3} md={4}>
+    <Grid className='grid-cards-container'container spacing={3}>
+          <Grid item xs={12} sm={6} md={4}>
               <Card className='cls-card1-homepage' sx={{ maxWidth: 345 }}>
                 <CardActionArea>
                     <CardMedia
@@ -26,7 +26,7 @@ function SaleRentProjectSelling() {
                 </CardActionArea>   
               </Card>        
           </Grid>
-          <Grid item xs={3} md={4}>
+          <Grid item xs={12} sm={6} md={4}>
               <Card className='cls-card2-homepage' sx={{ maxWidth: 345 }}>
                 <CardActionArea>
                     <CardMedia
@@ -47,7 +47,7 @@ function SaleRentProjectSelling() {
                 </CardActionArea>   
               </Card>            
           </Grid>
-          <Grid item xs={3} md={4}>
+          <Grid item xs={12} sm={6} md={4}>
               <Card className='cls-card3-homepage' sx={{ maxWidth: 345 }}>
                 <CardActionArea>
                     <CardMedia

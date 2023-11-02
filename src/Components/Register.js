@@ -1,37 +1,81 @@
-import { Box, Button, FormHelperText, InputLabel, MenuItem, Select, TextField, Typography } from '@mui/material'
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
-function Register() {
-    const [selected, setSelected] = useState('');
-    
-    const selectionChangeHandler = (event) => {
-        setSelected(event.target.value)
+const Register = () => {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    gender: 'male',
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(formData); // You can handle form submission here
   };
 
   return (
-          <Box component='form' className="box-register">
-          <Typography variant='h4' className='typographyHeader-register'>Register</Typography>
-            <TextField id="" fullWidth label={"Firstname"} type='email' variant="standard" /><br></br>
-            <TextField id="" fullWidth label={"Lastname"}type= 'email'  variant="standard" /><br></br>
-            <TextField id="" fullWidth label={"Email"}type= 'email'  variant="standard" /><br></br>
-            <TextField id="" fullWidth label={"Password"} type='password' variant="standard" /><br></br>
-            <InputLabel className='register-inputlabel-whatareyou' shrink ><h3>What are you?</h3></InputLabel>
-            <Select fullWidth className='register-select' displayEmpty value={selected} onChange={selectionChangeHandler} variant="standard">              
-              <MenuItem value="">
-                  Please select
-              </MenuItem>
-              <MenuItem value={1}>
-                  Vendor
-              </MenuItem>
-              <MenuItem value={2}>
-                  Buyer
-                </MenuItem>
-            </Select>
-          <FormHelperText className='register-select-formhelper'><em>*Please select if you are a Vendor or a Buyer.</em></FormHelperText>
-            <Button className='btn-register' variant='contained' color='info'>Submit</Button>
-          <Typography variant='p' sx={{ marginTop:2, textAlign:'center'}}>&copy; 2023 Monterola Realty. All Rights Reserved.</Typography>
-        </Box>
-  )
-}
+    <div className="registration-form">
+      <h1>Registration Form</h1>
+      <form onSubmit={handleSubmit}>
+        <div className="form-group">
+          <label htmlFor="firstName">First Name</label>
+          <input
+            type="text"
+            name="firstName"
+            id="firstName"
+            value={formData.firstName}
+            onChange={handleChange}
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="lastName">Last Name</label>
+          <input
+            type="text"
+            name="lastName"
+            id="lastName"
+            value={formData.lastName}
+            onChange={handleChange}
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            value={formData.email}
+            onChange={handleChange}
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="gender">Gender</label>
+          <select
+            name="gender"
+            id="gender"
+            value={formData.gender}
+            onChange={handleChange}
+          >
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <button type="submit">Register</button>
+      </form>
+    </div>
+  );
+};
 
 export default Register
