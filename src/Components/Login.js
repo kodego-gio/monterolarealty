@@ -1,16 +1,55 @@
-import React from 'react'
-import { Box, Button, TextField, Typography } from '@mui/material'
+import React, { useState } from 'react';
 
-function Login() {
+const LoginForm = () => {
+  const [formData, setFormData] = useState({
+    email: '',
+    password: '',
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Add your login logic here
+    console.log(formData);
+  };
+
   return (
-    <Box className="box-login">
-      <Typography variant='h4' className='typographyHeader-login'>Login</Typography>
-        <TextField id="" fullWidth label={"Email"}type= 'email'  variant="standard" /><br></br>
-        <TextField id="" fullWidth label={"Password"} type='password' variant="standard" /><br></br>
-        <Button fullWidth className='btn-login' variant='contained' color='info'>LOGIN</Button>
-      <Typography variant='p' sx={{ marginTop: 2, textAlign: 'center' }}>&copy; 2023 Monterola Realty.<br></br> All Rights Reserved.</Typography>
-    </Box>
-  )
-}
+    <div className="login-form">
+      <h2>Login</h2>
+      <form onSubmit={handleSubmit}>
+        <div className="form-group">
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            value={formData.password}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  );
+};
 
-export default Login
+export default LoginForm;

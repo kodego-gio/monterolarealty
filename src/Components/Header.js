@@ -6,7 +6,7 @@ export const Header = () => {
     
     <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand href="#home">Monterola Realty</Navbar.Brand>
+        <Navbar.Brand href="#home"><img src={require('../imgs/monterola-realty-logo1.png')} alt='monterola realty' /></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
