@@ -111,6 +111,7 @@ button:hover {
   max-width: 400px;
   margin: 0 auto;
   padding: 20px;
+  margin-bottom: 20px;
 }
 
 .form-group {
@@ -155,6 +156,7 @@ button:hover {
   border-radius: 5px;
   background-color: #fff;
   margin-top: 2rem;
+  margin-bottom: 20px;
 }
 
 .login-form h2 {
@@ -202,6 +204,7 @@ button:hover {
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: #fff;
+  margin-bottom: 20px;
 }
 
 .registration-form h1 {
