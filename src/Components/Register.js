@@ -1,11 +1,16 @@
+
+import axios from 'axios';
 import React, { useState } from 'react';
 
 const Register = () => {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
+    contact: '',
     email: '',
-    gender: 'male',
+    password: '',
+    role: 'buyer',
+    facebook_url: '',
   });
 
   const handleChange = (e) => {
@@ -16,9 +21,31 @@ const Register = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData); // You can handle form submission here
+  
+    const res = await axios.post('http://127.0.0.1:8000/api/registration',
+      JSON.stringify(formData),
+      {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+    if (res.data.status === 200)
+    { 
+      console.log(res.data.message);
+      this.useState({
+        firstName: '',
+        lastName: '',
+        contact: '',
+        email: '',
+        password: '',
+        role: 'buyer',
+        facebook_url: '',
+      });
+    }
+  
+   
   };
 
   return (
@@ -46,6 +73,17 @@ const Register = () => {
             onChange={handleChange}
           />
         </div>
+        
+        <div className="form-group">
+          <label htmlFor="contact">Contact</label>
+          <input
+            type="text"
+            name="contact"
+            id="contact"
+            value={formData.contact}
+            onChange={handleChange}
+          />
+        </div>
 
         <div className="form-group">
           <label htmlFor="email">Email</label>
@@ -59,17 +97,38 @@ const Register = () => {
         </div>
 
         <div className="form-group">
-          <label htmlFor="gender">Gender</label>
+          <label htmlFor="password">Password</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            value={formData.password}
+            onChange={handleChange}
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="usertype">Are you a Buyer or Seller?</label>
           <select
-            name="gender"
-            id="gender"
-            value={formData.gender}
+            name="role"
+            id="usertype"
+            value={formData.role}
             onChange={handleChange}
           >
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
+            <option value="buyer">Buyer</option>
+            <option value="vendor">Vendor</option>
           </select>
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="facebook_url">Facebook URL</label>
+          <input
+            type="url"
+            name="facebook_url"
+            id="fb_link"
+            value={formData.fb_link}
+            onChange={handleChange}
+          />
         </div>
 
         <button className='btn-register' type="submit">Register</button>

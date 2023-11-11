@@ -13,13 +13,12 @@ export const Header = () => {
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/about">About</Nav.Link>
             <NavDropdown title="Find More" id="collapsible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">For Sale</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
+              <NavDropdown.Item href="/forsale">For Sale</NavDropdown.Item>
+              <NavDropdown.Item href="/forrent">
                 For Rent
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">For Closure</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
+              <NavDropdown.Item href="/projectselling">
                 Project Selling
               </NavDropdown.Item>
             </NavDropdown>

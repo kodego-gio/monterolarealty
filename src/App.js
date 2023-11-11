@@ -7,7 +7,9 @@ import About from './Components/About';
 import Login from './Components/Login';
 import Register from './Components/Register';
 import Footer from './Footer';
-import Main from './Components/Main';
+import Forsale from './Components/Forsale';
+import ForRent from './Components/ForRent';
+import ProjectSelling from './Components/ProjectSelling';
 
 function App() {
   return (
@@ -18,6 +20,9 @@ function App() {
           <Route path="/about" element={<About />}></Route>
           <Route path="/login" element={<Login />}></Route>
           <Route path="/register" element={<Register />}></Route>
+        <Route path="/forsale" element={<Forsale />}></Route>
+        <Route path="/forrent" element={<ForRent />}></Route>
+        <Route path="/projectselling" element={<ProjectSelling />}></Route>
         </Routes>
       <Footer />
         
