@@ -10,6 +10,7 @@ import Footer from './Footer';
 import Forsale from './Components/Forsale';
 import ForRent from './Components/ForRent';
 import ProjectSelling from './Components/ProjectSelling';
+import AddProperty from './Components/AddProperty';
 
 function App() {
   return (
@@ -20,9 +21,10 @@ function App() {
           <Route path="/about" element={<About />}></Route>
           <Route path="/login" element={<Login />}></Route>
           <Route path="/register" element={<Register />}></Route>
-        <Route path="/forsale" element={<Forsale />}></Route>
-        <Route path="/forrent" element={<ForRent />}></Route>
+          <Route path="/forsale" element={<Forsale />}></Route>
+          <Route path="/forrent" element={<ForRent />}></Route>
         <Route path="/projectselling" element={<ProjectSelling />}></Route>
+        <Route path="/addproperty" element={<AddProperty />}></Route>
         </Routes>
       <Footer />
         

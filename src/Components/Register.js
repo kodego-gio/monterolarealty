@@ -1,8 +1,12 @@
 
 import axios from 'axios';
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
+
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -12,46 +16,44 @@ const Register = () => {
     role: 'buyer',
     facebook_url: '',
   });
+    
+  const [error, setError] = useState('');
+  const [success, setSuccess] = useState('');
 
-  const handleChange = (e) => {
+    const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
+    setFormData({ ...formData, [name]: value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
-    const res = await axios.post('http://127.0.0.1:8000/api/registration',
-      JSON.stringify(formData),
-      {
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      });
-    if (res.data.status === 200)
-    { 
-      console.log(res.data.message);
-      this.useState({
-        firstName: '',
-        lastName: '',
-        contact: '',
-        email: '',
-        password: '',
-        role: 'buyer',
-        facebook_url: '',
-      });
+    try {
+      const response = await axios.post('http://127.0.0.1:8000/api/register', formData);
+      setSuccess('Registration successful');
+
+      if (formData.role === 'buyer') {
+        navigate('/');
+      }
+      else
+      { 
+        navigate('/addproperty');
+      }
+
+    } catch (error) {
+       if (error.response && error.response.data) {
+        setError(error.response.data.message);
+      } else {
+        setError('Registration failed. Please try again.');
+      }
+      // Handle the error, show a message, etc.
     }
-  
-   
   };
 
   return (
     <div className="registration-form">
       <h1>Registration Form</h1>
       <form onSubmit={handleSubmit}>
+        {error && <div style={{ color: 'red' }}>{error}</div>}
         <div className="form-group">
           <label htmlFor="firstName">First Name</label>
           <input
