@@ -58,6 +58,7 @@ nav {
 
 .MuiButtonBase-root.btn-register {
   margin-top: 2rem;
+  text-align: center;
 }
 
 /*---------------------Homepage Card CSS----------------------------*/
@@ -207,7 +208,7 @@ button:hover {
   margin-bottom: 20px;
 }
 
-.registration-form h1 {
+.h2-registrationForm-header {
   text-align: center;
 }
 
@@ -307,6 +308,38 @@ button:hover {
 
 }
 
-/* Style social media icons, company details, and contact numbers individually */
+/* Add Property Form */
+.div-addProperty-form {
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 2rem;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.addProperty-header-text {
+  text-align: center;
+}
+.div-btn-register {
+  text-align: center;
+}
+
+
+
 
 

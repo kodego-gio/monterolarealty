@@ -50,9 +50,10 @@ const Register = () => {
   };
 
   return (
+    
     <div className="registration-form">
-      <h1>Registration Form</h1>
-      <form onSubmit={handleSubmit}>
+      <h2 className='h2-registrationForm-header'>Registration Form</h2>
+      <form onSubmit={handleSubmit}>       
         {error && <div style={{ color: 'red' }}>{error}</div>}
         <div className="form-group">
           <label htmlFor="firstName">First Name</label>
@@ -132,8 +133,9 @@ const Register = () => {
             onChange={handleChange}
           />
         </div>
-
-        <button className='btn-register' type="submit">Register</button>
+        <div className='div-btn-register'>
+          <button className='btn-register' type="submit">Register</button>
+        </div>
       </form>
     </div>
   );

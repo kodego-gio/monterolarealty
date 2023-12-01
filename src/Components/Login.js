@@ -41,18 +41,24 @@ const LoginForm = () => {
         //call apiBackend
         //http://127.0.0.1:8000/api/login
         console.log("checking...try...");
-        const response = await axios.post('http://localhost:8000/api/login', formData, {
-          headers: {
-            'Accept': 'application/json'
-          }
-        });
-        
+        const response = await axios.post('http://localhost:8000/api/login', formData,);
+
         console.log("respo",response);
         const token = response.data.token;
         setsubmitLoading(false);
         localStorage.setItem('login_token', token);
-        console.log(response);
-        navigate('/addproperty');
+        const role = response.data.user.usertype;
+        console.log(response.data);
+        console.log("get role!", role);
+        if (role === 'buyer') {
+          navigate('/');
+        }
+        else
+        { 
+          navigate('/addproperty');
+        }
+   
+        
         
       } catch (error) {
         console.log("checking...catch");
@@ -106,7 +112,9 @@ const LoginForm = () => {
             required
           />
         </div>
-        <button type="submit">Login</button>
+        <div className='div-btn-register'>
+          <button type="submit">Login</button>
+        </div>
       </form>
     </div>
   );
